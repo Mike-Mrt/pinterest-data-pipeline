@@ -34,8 +34,6 @@ To ensure that all fo these components work together to create a robust data pip
 
 The details of all of the packages utilised within this project will be outlined in the [Installation Instructions](#installation-instructions).
 
-
-
 ## Learning Outcomes
 
 The learning outcomes of the project.
@@ -50,7 +48,12 @@ Instructions on how to use the project if you want to test it.
 
 ## File Structure of the Project
 
-An overview of the project's file structure, link to github should be provided.
+The GitHub repo for this project can be found here: [Pinterest Data Pipeline project](https://github.com/Mike-Mrt/pinterest-data-pipeline).
+
+The current filestructure is as follows:
+
+- pinterest-data-pipeline
+  - README.md
 
 ## License Information
 
