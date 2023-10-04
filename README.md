@@ -54,6 +54,7 @@ The current filestructure is as follows:
 
 - pinterest-data-pipeline
   - README.md
+  - Batch_Data_processing.ipynb
 
 ## License Information
 
