@@ -21,6 +21,7 @@ This project utilises many components from the AWS ecosystem to build the pipeli
 - AWS IAM (manage access to AWS resources)
 - AWS MSK (fully managed, highly scalable, and secure service for Apache Kafka)
 - AWS API Gateway (build, deploy and manage APIs)
+- AWS MWAA (a managed service for Apache Airflow to orchestrate workflows)
 
 To ensure that all fo these components work together to create a robust data pipeline we also require:
 
@@ -49,6 +50,7 @@ The learning outcomes of the project can be laid out step by step as each sectio
 9. Need to set up a Databricks account and use a notebook within this to Mount the S3 bucket which contains JSON files as data for each of the 3 topics to Databricks. 
 10. Once the S3 bucket has been mounted, the data can be read and 3 spark dataframes were created for each of the tables: users, geolocation and pinterest posts data. These 3 tables were then cleaned by changing columns orders, column data types, ensuring the data was coherent (e.g. follower_count had values such as 2M, 100k etc so had to change these to integers). 
 11. Once the 3 tables were cleaned, analysis was performed on these tables by joining them when necessary and running computations on Databricks but utilising Spark. 
+12. Writing up a DAG which will trigger the above Databricks notebook at a determined schedule through the use of the AWS MWAA. This will allow workflows to be managed on Databricks. 
 
 ## Installation Instructions
 
