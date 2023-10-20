@@ -12,7 +12,7 @@ Pinterest is a platform which leverages immense amounts of data to personalise t
 
 ## Introduction
 
-The current state of most companies, from large financial corporations to small businesses, is that they are becoming highly data driven. Therefore, understanding how to efficiently collect, transform and analyse data is essential to continue to thrive. This project showcases a data pipeline that integrates both batch and streaming data processing. Through the integration of AWS cloud the system that has been designed is not only scalable and highly secure but also reliable and cost efficient by having the ability to adapt to flcutuating data volumes and computational demands. 
+The current state of most companies, from large financial corporations to small businesses, is that they are becoming highly data driven. Therefore, understanding how to efficiently collect, transform and analyse data is essential to not only comptete but to thrive in this current environment. This project showcases a data pipeline that integrates both batch and streaming data processing. Through the integration of AWS cloud the system that has been designed is not only scalable and highly secure but also reliable and cost efficient by having the ability to adapt to flcutuating data volumes and computational demands. 
 
 This system requires the use of several of the AWS services, including: 
 
