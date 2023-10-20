@@ -1,5 +1,5 @@
 # Pinterest Data Pipeline project
-Pinterest utilises billions of data to ensure its customers are provided with their preferences. In this project, a similar system is designed utilising AWS Cloud, the details of this will follow.
+Pinterest is a platform which leverages immense amounts of data to personalise their users experience - this project aims to replicate a similar data pipeline system using the power of AWS Cloud.
 
 ## Table of Contents
 
@@ -12,9 +12,9 @@ Pinterest utilises billions of data to ensure its customers are provided with th
 
 ## Introduction
 
-The Pinterest data pipeline simulation project will in effect use many components of the AWS ecosystem combined with Databricks to build a data pipeline. Ths pipeline will incorporate both batch data and streaming data to ensure that the pipeline is robust and utilise the cloud so that the the pipeline is scalable, cost- efficient, highly secure, reliable and completely flexible according to the volume of data and compute resources utilised by the system. This will ensure the incoming data is clean and ready to be analysed to ensure the customer has the most optimised Pinterest feed according to their personal preferences. 
+The current state of most companies, from large financial corporations to small businesses, is that they are becoming highly data driven. Therefore, understanding how to efficiently collect, transform and analyse data is essential to continue to thrive. This project showcases a data pipeline that integrates both batch and streaming data processing. Through the integration of AWS cloud the system that has been designed is not only scalable and highly secure but also reliable and cost efficient by having the ability to adapt to flcutuating data volumes and computational demands. 
 
-This project utilises many components from the AWS ecosystem to build the pipeline, these include:
+This system requires the use of several of the AWS services, including: 
 
 - AWS EC2 (virtual servers in the cloud)
 - AWS S3 (scalable storage in the cloud)
@@ -63,11 +63,11 @@ The learning outcomes of the project can be laid out step by step as each sectio
 
 ## Installation Instructions
 
-Detailed steps on how to install the project.
+The project is proprietary data and therefore, detailed instructions of how to install the exact packages required cannot be outlined. However, the programming language used is Python 3 and SQL for database querying purposes. All other AWS services and technologies used have been outlined in the [Introduction](#introduction).
 
 ## Usage Instructions
 
-Instructions on how to use the project if you want to test it.
+The project is proprietary, therefore not all files have been uploaded to the GitHub repository. Therefore, it is not possible to provide usage instructions. However, the [Learning Outcomes](#learning-outcomes) has outlined all the steps taken to get this system set up. 
 
 ## File Structure of the Project
 
@@ -84,7 +84,5 @@ The current filestructure is as follows:
 
 ## License Information
 
-Licensing details for the project.
-
-
+This project is proprietary and is not open source. However, the code that has been designated as viewable may be used for educational purposes. 
 
