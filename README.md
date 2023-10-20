@@ -78,9 +78,10 @@ The current filestructure is as follows:
 - pinterest-data-pipeline
   - README.md
   - batch_processing
-    - Batch_Data_processing.ipynb
+    - batch_data_processing.ipynb
     - 0e1f6d6285c1_dag.py
   - stream_processing
+    - stream_data_processing.py
 
 ## License Information
 
