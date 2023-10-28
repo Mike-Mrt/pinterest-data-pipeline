@@ -22,13 +22,13 @@ This system requires the use of several of the AWS services, including:
 - AWS MSK (fully managed, highly scalable, and secure service for Apache Kafka)
 - AWS API Gateway (build, deploy and manage APIs)
 - AWS MWAA (a managed service for Apache Airflow to orchestrate workflows)
+- Kinesis (processing real-time streaming data)
 
 To ensure that all fo these components work together to create a robust data pipeline we also require:
 
 - Apache Kafka
 - Apache Spark
 - Apache Airflow
-- Apache Kinesis
 - Databricks
 - Couple of GitHub packages which will aid in IAM authentication and package to communicate with the MSK cluster.
 - GitHub (version control platform)
