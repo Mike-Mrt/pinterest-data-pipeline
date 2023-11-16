@@ -77,6 +77,11 @@ The current filestructure is as follows:
 
 - pinterest-data-pipeline
   - README.md
+  - data_generation
+    - db_creds.yaml (file containing credentials - not visible in GitHub)
+    - user_posting_emulation.py
+    - user_posting_emulation_kafka.py
+    - user_posting_emulation_streaming.py
   - batch_processing
     - batch_data_processing.ipynb
     - 0e1f6d6285c1_dag.py
