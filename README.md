@@ -82,11 +82,13 @@ The current filestructure is as follows:
     - user_posting_emulation.py
     - user_posting_emulation_kafka.py
     - user_posting_emulation_streaming.py
+  - data_transformations
+    - transformations.ipynb
   - batch_processing
     - batch_data_processing.ipynb
     - 0e1f6d6285c1_dag.py
   - stream_processing
-    - stream_data_processing.py
+    - stream_data_processing.ipynb
 
 ## License Information
 
