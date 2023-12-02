@@ -41,8 +41,11 @@ The learning outcomes of the project can be laid out step by step as each sectio
 
 1. Creating a data creation file which outputs rows from 3 different tables stored in an S3 bucket that contain data for the users, geolocation and pinterest posts.
 2. Setting up an AWS account (usually provided by organisation).
-3. Setting up an EC2 instance and connect to it via the terminal using SSH, the keypair (.pem) file and the name of the EC2 instance. 
-4. Downloading and setting up Apache Kafka on the EC2 instance, to do this you need to download Kafka directly onto the EC2 instace. However, to do this also need to install javajdk.
+3. Setting up an EC2 instance and connect to it via the terminal using SSH, the keypair (.pem) file and the name of the EC2 instance.
+```shell
+ssh -i "0e1f6d6285c1-key-pair.pem" ec2-user@ec2-XX-XXX-XXX-XXX.compute-1.amazonaws.com
+```
+4. Downloading and setting up Apache Kafka on the EC2 instance, to do this you need to download Kafka directly onto the EC2 instance. However, to do this JavaJDK also needs to be installed.
 5. Downloading and setting up the IAM authentication package on the EC2 instance so that connectivity can be established to the MSK cluster via IAM authentication.
 6. Now the topics can be created by editing the server.properties file appropriately with the Plaintext Apache Zookeeper connection string and using the Bootstrap server string in the command.
 7. MSK cluster will then be connected to an S3 bucket so that any data going through the cluster will be automatically saved and stored in a dedicated S3 bucket. A custom plugin was created in MSK Connect and then a connector was created.
