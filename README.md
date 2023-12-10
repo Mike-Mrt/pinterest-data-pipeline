@@ -49,13 +49,18 @@ ssh -i "0e1f6d6285c1-key-pair.pem" ec2-user@ec2-XX-XXX-XXX-XXX.compute-1.amazona
 5. Downloading and setting up the IAM authentication package on the EC2 instance so that connectivity can be established to the MSK cluster via IAM authentication.
 6. Now the topics can be created by editing the server.properties file appropriately with the Plaintext Apache Zookeeper connection string and using the Bootstrap server string in the command.
 7. MSK cluster will then be connected to an S3 bucket so that any data going through the cluster will be automatically saved and stored in a dedicated S3 bucket. A custom plugin was created in MSK Connect and then a connector was created.
+![Creating a custom plugin](images/Custom_plugin_MSK.png)
+![Connector for Kafka](images/Connector_MSK.png)
 8. Creating and configuring an API in API gateway that will send data to the MSK cluster which in turn will be stored in an S3 bucket. Building a Proxy integration for the API and took note of the Invoke URL. Set up the Kafka REST proxy on the EC2 client and then the REST proxy can be initiated. By modifying the data creation file in step 1, we send the data created to the Kafka topics I created earlier using the API Invoke URL. 
+![Configuring API in API Gateway with Kafka proxy integration](images/Configuring_API_Batch.png)
 9. Setting up a Databricks account and using a notebook within this to Mount the S3 bucket which contains JSON files as data for each of the 3 topics to Databricks. 
 10. Once the S3 bucket has been mounted, the data can be read and 3 spark dataframes were created for each of the tables: users, geolocation and pinterest posts data. These 3 tables were then cleaned by changing columns orders, column data types, ensuring the data was coherent (e.g. follower_count had values such as 2M, 100k etc so had to change these to integers). 
 11. Once the 3 tables were cleaned, analysis was performed on these tables by joining them when necessary and running computations on Databricks but utilising Spark. 
 12. Writing up a DAG which will trigger the above Databricks notebook at a determined schedule through the use of the AWS MWAA. This will allow workflows to be managed on Databricks. 
+![Successul run of the DAG](images/AWS_successful_DAG.png)
 13. The next step is setting up data streams to Kinesis and then reading the this data in Databricks. Firstly, 3 data streams were created in the AWS Kinesis for each of the 3 tables (Pinterest posts data, geolocation data and user data).
 14. Configuring an API (in AWS API Gateway) with Kinesis proxy integration to allow it to invoke Kinesis actions. The API created will be able to invoke the following actions: list streams in Kinesis, create, describe and delete streams in Kinesis and add records to streams in Kinesis.
+![Configuring API in API Gateway with Kinesis proxy integration](images/Configure_Kinesis_API.png)
 15. Updating the user_posting_emulation_streaming.py file to enable the data generated to be sent to the Kinesis streams by sending it as JSON payloads and invoking the API.
 16. Reading the data into spark dataframes, however, the dataframe columns are as follows: partitionKey, data, stream, shardId, seuquenceNumber, approximateArrivalTimestamp.
 17. The data column of the above dataframe is then deserialised and another dataframe is created with one column ('data') which contains rows of JSON strings. 
